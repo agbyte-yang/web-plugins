@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
+    <script src="../-.js"></script>
+</head>
+<body>
+
+<button id="post_message">Post Message</button>
+
+<script type="text/javascript">
+    document.getElementById('post_message').onclick = function(event) {
+        var data ={"key": "updatetime", "value":new Date().getTime()} ;
+
+        console.log("post:"+data);
+
+        jwindow.postback(data);
+
+    };
+
+</script>
+
+</body>
+</html>
