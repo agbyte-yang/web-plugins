@@ -1,1 +1,26 @@
-#a jquery plugin for postmessage between browser Windows
+# jwindow
+a jquery plugin for postmessage between browser Windows
+
+# how to use
+1. put the script tag into your html head, like this
+<head>
+    <meta charset="UTF-8">
+    <title>parent</title>
+    <script src="../jwindow.js"></script>
+</head>
+
+2. use it in your script code
+ > for send message to any window
+ jwindow.post({key:"define your message key", value: put the data here}, your-destination-window-object);
+ 
+ > for send message to the opener window
+ jwindow.postback({key:"define your message key", value: put the data here});
+ 
+ > for listen the message from other windows
+ jwindow.onmessage("the message key for listen", function (e) {
+     // add your code handle the message like this 
+     // $('body>div').append(e.data.value);
+     
+ });
+
+any question view the demo files
